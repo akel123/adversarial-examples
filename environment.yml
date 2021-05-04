@@ -1,0 +1,13 @@
+name: adversarial-defenses
+dependencies:
+  - python=3.7
+  - pip=20.2.2
+  - tensorflow=1.15.0
+  - jupyter
+  - scipy=1.1.0
+  - pip:
+    - cleverhans==2.1
+    - scikit-learn==0.24.2
+    - matlab
+    - scikit-image==0.18.1 # TODO: check if I can remove this
+    
