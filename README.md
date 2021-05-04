@@ -1,5 +1,6 @@
 Code to reproduce results in the paper [Defending against Adversarial Images using Basis Functions Transformations](https://arxiv.org/pdf/1803.10840.pdf)
 
+
 # Requirements
 
 - Python 3.4 or higher
@@ -7,6 +8,21 @@ Code to reproduce results in the paper [Defending against Adversarial Images usi
 - Cleverhans 2.0
 - sklearn
 - matlab.engine
+
+Instead of downloading the above requirments manually, you can install as done below and guarantee you have the correct versions of everything.
+
+# Create env
+
+Download [conda](https://docs.anaconda.com/anaconda/install/) if you haven't already and pop a terminal (mac/linux) or Anaconda Prompt (windows). Put yourself in the base folder of the repository and type
+```
+conda env create -f environment.yml
+conda activate adversarial-defenses
+```
+Now either run the files you want, or open a notebook to play (there are already some one can use as tutorials/exploration)
+```
+jupyter notebook 
+```
+
 
 # Usage
 
