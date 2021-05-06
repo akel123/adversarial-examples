@@ -3,8 +3,6 @@ import tensorflow as tf
 import numpy as np
 import os
 from scipy.misc import imsave, imread
-import inceptionv3
-from utils import load_image, one_hot
 import subprocess
 
 slim = tf.contrib.slim
