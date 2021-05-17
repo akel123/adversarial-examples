@@ -28,6 +28,8 @@ where `$matlabroot` is your matlab root directory. For example, it could be simi
 
 # Usage
 
+Download the [checkpoint](https://www.kaggle.com/google-brain/inception-v3?select=inception_v3.ckpt) for the trained network
+
 We use Cleverhans to perform Fast Gradient Attack. 
 
 ## Gray-box attack 
