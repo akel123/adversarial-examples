@@ -13,14 +13,16 @@ def jpeg(attack_dir, denoise_base_dir, approx_level):
     l2_dir_list = sorted(get_subdirs(attack_dir))
 
     #Loop through every folder of the form l2dis_0.0x
+    out_dirs = []
     for l2_dir in l2_dir_list:
         images      = [f for f in os.listdir(l2_dir) if os.path.isfile(os.path.join(l2_dir, f))]
         l2_distance = os.path.basename(os.path.normpath(l2_dir))
         output_dir  =  denoise_base_dir + jpeg.__name__ + '_' + str(approx_level) + '/' + attack_name + '/' + l2_distance + '/'   
+        out_dirs.append(output_dir)
 
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-
+        
         for image in images:
             im1 = Image.open(os.path.join(l2_dir, image))
             filename, file_extension = os.path.splitext(image)
@@ -28,3 +30,5 @@ def jpeg(attack_dir, denoise_base_dir, approx_level):
             IMAGE_10 = os.path.join(output_dir, jpeg_filename)
             im1.save(IMAGE_10,"JPEG", quality=approx_level)
             im10 = Image.open(IMAGE_10)
+       
+    return out_dirs

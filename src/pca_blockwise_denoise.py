@@ -62,7 +62,7 @@ def pca_blockwise(attack_dir, denoise_base_dir, num_components):
     for l2_dir in l2_dir_list:
         images, paths = load_images(l2_dir)
         l2_distance   = os.path.basename(os.path.normpath(l2_dir))
-        output_dir    =  denoise_base_dir + pca.__name__ + '_' + str(num_components) + '/' + attack_name + '/' + l2_distance + '/'
+        output_dir    =  denoise_base_dir + pca_blockwise.__name__ + '_' + str(num_components) + '/' + attack_name + '/' + l2_distance + '/'
         print(output_dir)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
